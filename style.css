@@ -29,6 +29,6 @@ button{
     display: flex;
     align-content: center;
     margin-left: 200px;
-    margin-top: 20px;
-    font-size: 50px;
+    margin-top: 10px;
+    font-size: 40px;
 }
