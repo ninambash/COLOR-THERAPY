@@ -14,9 +14,12 @@
     border: 1px solid red;
     color: red;
 }
-
+body{
+    background-color: azure;
+    margin: 200px;
+}
 .message{
-    
+    text-align: center;
     font-size: 40px;
     margin-bottom: 5px;
     margin-right: 150px;
