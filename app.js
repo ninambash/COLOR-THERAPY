@@ -18,9 +18,12 @@ button.addEventListener("click",function(){
  })
  function player(){
    button.disabled = true
-       gameClicks = []
-       userClicks = []
-       runSequence(playNum)
+   button.style.display = 'none'
+   player()
+   gameClicks = []
+   userClicks = []
+   runSequence(playNum)
+       
  }
  function runSequence(num){
   let squares = document.querySelectorAll(".box")
@@ -73,12 +76,19 @@ function checkAnswer(e){
   }
   console.log(userClicks)
 }
+////user message function
+function messager(mes){
+  message.innerHTML = mes
+}
+
 //////end game function
 function endGame(){
   console.log("game over")
   button.disabled = false
+  button.style.display = "blockS"
   if(userClicks.toString() == gameClicks.toString()){
     playNum++
+    messager("Match Pattern")
     console.log("correct")
   }else{
     console.log("not correct")
