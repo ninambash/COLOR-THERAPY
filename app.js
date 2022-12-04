@@ -73,6 +73,17 @@ function checkAnswer(e){
   }
   console.log(userClicks)
 }
+//////end game function
+function endGame(){
+  console.log("game over")
+  button.disabled = false
+  if(userClicks.toString() == gameClicks.toString()){
+    playNum++
+    console.log("correct")
+  }else{
+    console.log("not correct")
+  }
+}
 function eleFactory(elType){
   let ele = document.createElement(elType)
   return ele
