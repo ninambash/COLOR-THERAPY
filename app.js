@@ -85,7 +85,7 @@ function endGame() {
   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
   if (userClicks.toString() == gameClicks.toString()) {
     playNum++; /////increase the play number if they got correct
-    messanger('correct') ////let the player know status of the game
+    messanger('correct') ////let the player know status of the game if correct
   }else{
     messanger("not correct");
   }
