@@ -87,7 +87,7 @@ function endGame() {
     playNum++; /////increase the play number if they got correct
     messanger('correct') ////let the player know status of the game if correct
   }else{
-    messanger("not correct");
+    messanger("Try again");
   }
 }
 

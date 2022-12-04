@@ -1,7 +1,7 @@
 .gamearea{
     height: 500px;
     width: 500px;
-    border: 2px solid black;
+    border: 3px solid black;
 }
 .box{
     width: 50%;
