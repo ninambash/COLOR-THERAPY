@@ -1,7 +1,7 @@
 .gamearea{
-    height: 200px;
-    width: 200px;
-    border: 1px solid black;
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
 }
 .box{
     width: 50%;
@@ -14,4 +14,21 @@
     border: 1px solid red;
     color: red;
 }
-
+body{
+    background-color: azure;
+    margin: 200px;
+}
+.message{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 5px;
+    margin-right: 150px;
+}
+button{
+    background-color:azure;
+    display: flex;
+    align-content: center;
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 50px;
+}
