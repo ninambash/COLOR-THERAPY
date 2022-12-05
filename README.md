@@ -28,6 +28,7 @@ change the H1 to reflect correct or not correct
 Make colors move faster by decreasing the timer as the player gets better at the game
 Style the board to look nicer
 Have user log in to continue where they left off and keep track of that paticular user
+Have a separate link for rules of the game
 
 
 # potential roadblocks
