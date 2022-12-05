@@ -27,5 +27,8 @@ change the H1 to reflect correct or not correct
 # stretch goals
 Make colors move faster by decreasing the timer as the player gets better at the game
 Style the board to look nicer
+Have user log in to continue where they left off and keep track of that paticular user
+
+
 # potential roadblocks
 Making the colors go faster and increasing in number
