@@ -36,17 +36,20 @@ button{
 }
 .rules-of-play{
     background-color: azure;
-    margin-right: ;
+   
     margin-left: 600px;
     margin-top:-500px ;
-    margin-bottom: ;
+    
 }
 restart-button{
    background-color: blueviolet;
    margin-left: 350px;
 
 }
-@media screen {
+@media screen and (max-width:900px){
+    body{
+        background-color: blue;
+    }
     .gamearea{
         height:500px;
         width: 500px;
@@ -55,5 +58,10 @@ restart-button{
         text-align: center;
         margin-left: -800px;
 
-    }    
+    } 
+    .rules-of-play{
+        margin-left: 600px;
+        margin-top:-500px ;
+
+    }   
 }
