@@ -18,9 +18,14 @@ Have 4 - 5 boxes in a board
 Add set Timer function to make colors move from one box to the other 
 add event listeners for a player to click the colors they saw
 Add win function 
+Reset button 
+Start button disappear when the game is playing
+change the H1 to reflect correct or not correct
+
+
 
 # stretch goals
 Make colors move faster by decreasing the timer as the player gets better at the game
 Style the board to look nicer
 # potential roadblocks
-Making the timer go faster
+Making the colors go faster and increasing in number
