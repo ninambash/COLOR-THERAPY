@@ -34,6 +34,13 @@ button{
     font-size: 40px;
     
 }
+.rules-of-play{
+    background-color: azure;
+    margin-right: ;
+    margin-left: 600px;
+    margin-top:-500px ;
+    margin-bottom: ;
+}
 restart-button{
    background-color: blueviolet;
    margin-left: 350px;
