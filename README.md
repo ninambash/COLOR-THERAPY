@@ -30,6 +30,9 @@ Make colors move faster by decreasing the timer as the player gets better at the
 Style the board to look nicer
 Have user log in to continue where they left off and keep track of that paticular user
 Have a separate link for rules of the game
+Adding media querries
+
+
 
 
 # potential roadblocks
