@@ -4,6 +4,7 @@ const gameColors = ["red", "blue", "green", "yellow"];
 const message = document.querySelector(".message");
 const gamearea = document.querySelector(".gamearea");
 const button = document.querySelector("button");
+const resetbtn = document.querySelector(".play-again")
 
 
 
@@ -13,7 +14,8 @@ let inPlay = false;
 let playNum = 2;
 
 ///add event listeners
-window.addEventListener("load", setup);
+resetbtn.addEventListener("click", setup)
+
 button.addEventListener("click", function () {
   if (!inPlay) {
     player();
