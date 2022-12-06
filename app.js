@@ -14,7 +14,13 @@ let inPlay = false;
 let playNum = 2;
 
 ///add event listeners
-resetbtn.addEventListener("click", runSequence)
+resetbtn.addEventListener("click", function(){
+  if (!inPlay) {
+    runSequence();
+  }
+
+})
+
  
 
 
@@ -103,6 +109,8 @@ function eleFactory(elType) {
   let ele = document.createElement(elType);
   return ele;
 }
-reset()
+function reset(){
+
+}
   
 
