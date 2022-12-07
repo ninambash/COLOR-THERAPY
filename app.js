@@ -1,6 +1,6 @@
 console.log("Lets do thissssssssssss")
 ////connecting DOM elements
-let  gameColors = ["red", "blue", "green", "yellow"]
+let  gameColors = ["red", "blue", "green", "yellow"] /////array of all the wanted colors
 const message = document.querySelector(".message")
 const gamearea = document.querySelector(".gamearea")
 const button = document.querySelector("button");
@@ -21,11 +21,11 @@ button.addEventListener("click", function () {
     player() ///////////////check if the inplay is false
   }
 })
-
+/////////////when the game is in play
 function player() {
   button.disabled = true; //////can't press the start button again once the gane starts 
   button.style.display = "none"
-  userMessange('Match Pattern')
+  userMessange('Match Pattern') ///this is what the user sees 
   gameClicks = []  ////launch a new game 
   userClicks = []
   runSequence(playNum)   /////call the run sequence function
@@ -34,7 +34,7 @@ function player() {
 //////run sequence function 
 function runSequence(num) {
   let squares = document.querySelectorAll(".box")
-  num--;
+  num-- //////////////////recursion
   if (num < 0) { //////// check if the value of num is less than 0 and run through the sequence 
     inPlay = true ///////this allows user to only build their sequence after the sequence has run to avoid cheating 
     return ///////////////return it to player area
@@ -44,7 +44,7 @@ function runSequence(num) {
   console.log(squares[randomNum])
   gameClicks.push(gameColors[randomNum])
   console.log(gameClicks);
-  squares[randomNum].style.opacity = "1"
+  squares[randomNum].style.opacity = "1"       //////light opacity so that we can see it
   setTimeout(function () {
     squares[randomNum].style.opacity = "0.5"
     setTimeout(function () { //////////set timeout function
@@ -52,7 +52,7 @@ function runSequence(num) {
     }, 100)
   }, 500)
 }
-///create a function for set up    /////2///////////////////
+///create a function for set up building our game board//////////////
 function setup() {
   //check if its working
   console.log("page Loaded")
@@ -63,21 +63,21 @@ function setup() {
     div.style.opacity = "0.5" /////////// so that its not so bright 
     div.myColor = gameColors[X]
     div.addEventListener("click", checkAnswer);  /////added event listener for the four boxex(divs) here
-    gamearea.appendChild(div) ///////append the element to the game area
+    gamearea.appendChild(div) ///////append the new element to the game area
   }
 }
-///this is where the user paticipates
+///this is where the user paticipates///////////////////
 function checkAnswer(e) {
   if (inPlay) {
-    let el = e.target ///////getting the element information  3
+    let el = e.target ///////getting the element information////////////////////what element was triggered
     userClicks.push(el.myColor); /////// 
     el.style.opacity = "1" /////make it full color
     setTimeout(function () {
-      el.style.opacity = "0.5" /////
+      el.style.opacity = "0.5" ///// back to its original state///////////////////////
     }, 500)
     if (userClicks.length == gameClicks.length) {  //////this ends the game
       inPlay = false
-      endGame()
+      endGame() //////////////////////////////anables the start button again/////////////////////
     }
   }
   console.log(userClicks)
@@ -93,7 +93,7 @@ function endGame() {
   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString refrence of how toSring works
   if (userClicks.toString() == gameClicks.toString()) {
     playNum++; /////increase the play number if they got correct
-    userMessange('correct') ////let the player know status of the game if correct
+    userMessange('Correct!!!! New Level') ////let the player know status of the game if correct they got a new level
   }else{
     userMessange("Try again")    ////if not correct 
   }
