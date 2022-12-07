@@ -26,14 +26,16 @@ change the H1 to reflect correct or not correct<br>
 
 
 # stretch goals
-Make colors move faster by decreasing the timer as the player gets better at the game<br>
-Have user log in to continue where they left off and keep score of that paticular user to continue the next time they log in <br>
-Have a separate link for rules of the game as opposed to displaying on the same page <br>
-Adding media querries<br>
-Adding levels to the game<br>
+Make colors move faster by decreasing the timer as the player gets better at the game.<br>
+Have user log in to continue where they left off and keep score of that paticular user to continue the next time they log in.<br>
+Have a separate link for rules of the game as opposed to displaying on the same page. <br>
+Adding media querries.<br>
+Adding levels to the game.<br>
+Adding more interractions to the game.
 
 
 
 
 # potential roadblocks
-Style the board to look nicer
+Style the board to look nicer<br>
+

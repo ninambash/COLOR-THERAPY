@@ -1,10 +1,10 @@
 console.log("hello World");
 ////connecting DOM elements
-const gameColors = ["red", "blue", "green", "yellow"];
+let  gameColors = ["red", "blue", "green", "yellow"];
 const message = document.querySelector(".message");
 const gamearea = document.querySelector(".gamearea");
 const button = document.querySelector("button");
-//const resetbtn = document.querySelector(".play-again")
+const resetbtn = document.querySelector(".play-again")
 let gameClicks = [];
 let userClicks = [];
 let inPlay = false;
@@ -15,7 +15,9 @@ let playNum = 5;
 
  
 
-//resetbtn.addEventListener("click" reset)
+resetbtn.addEventListener("click", function(){
+ reset()
+})
 window.addEventListener("load",setup)
 button.addEventListener("click", function () {
   if (!inPlay) {
@@ -102,8 +104,18 @@ function eleFactory(elType) {
   let ele = document.createElement(elType);
   return ele;
 }
-//function reset(){
+function reset(){
+   gameClicks = [];
+   userClicks = [];
+    inPlay = false;
+    playNum = 5;
+    gameColors = ["red", "blue", "green", "yellow"]
+    button.style.display = "block"
+    button.style.opacity = "1"
+    button.disabled = false
+
+    ///add start btn remove hidden fron
   //setup()
 
-//}
+}
 
