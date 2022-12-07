@@ -1,4 +1,4 @@
-console.log("hello World")
+console.log("Lets do thissssssssssss")
 ////connecting DOM elements
 let  gameColors = ["red", "blue", "green", "yellow"]
 const message = document.querySelector(".message")
@@ -25,7 +25,7 @@ button.addEventListener("click", function () {
 function player() {
   button.disabled = true; //////can't press the start button again once the gane starts 
   button.style.display = "none"
-  messanger('Match Pattern')
+  userMessange('Match Pattern')
   gameClicks = []  ////launch a new game 
   userClicks = []
   runSequence(playNum)   /////call the run sequence function
@@ -40,7 +40,7 @@ function runSequence(num) {
     return ///////////////return it to player area
   }
   /////////////////////////////////user mimic this using a random color 
-  let randomNum = Math.floor(Math.random() * gameColors.length);   ///////////// use math.random to return a random floating number ref MDN.Web docs
+  let randomNum = Math.floor(Math.random() * gameColors.length);   // use math.random to return a random floating number https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
   console.log(squares[randomNum])
   gameClicks.push(gameColors[randomNum])
   console.log(gameClicks);
@@ -82,7 +82,7 @@ function checkAnswer(e) {
   }
   console.log(userClicks)
 }
-function messanger(mes){
+function userMessange(mes){
   message.innerHTML =mes
 }
 //////end game function
@@ -90,12 +90,12 @@ function endGame() {
   console.log("game over")
   button.disabled = false
   button.style.display = "block"
-  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
+  //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString refrence of how toSring works
   if (userClicks.toString() == gameClicks.toString()) {
     playNum++; /////increase the play number if they got correct
-    messanger('correct') ////let the player know status of the game if correct
+    userMessange('correct') ////let the player know status of the game if correct
   }else{
-    messanger("Try again")
+    userMessange("Try again")    ////if not correct 
   }
   
 }
@@ -104,6 +104,7 @@ function eleFactory(elType) {
   let ele = document.createElement(elType)
   return ele;
 }
+/////////////////function to reset the game to the first level
 function reset(){
    gameClicks = []
    userClicks = []
@@ -113,9 +114,6 @@ function reset(){
     button.style.display = "block"
     button.style.opacity = "1"
     button.disabled = false
-
-    ///add start btn remove hidden fron
-  //setup()
-
+  
 }
 
