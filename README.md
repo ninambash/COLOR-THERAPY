@@ -18,7 +18,7 @@ Start button to start playing the game.<br>
 Have 4 boxes in a board.<br>
 Add set Timer function to make colors move from one box to the other.<br>
 Add event listeners for a player to click the colors they saw.<br>
-Start the game with memorising one color then advancing to more colors as the player keeps getting better.<br>
+Start the game with memorising two colors then advancing to more colors as the player keeps getting better.<br>
 Change the H1 to update the player to reflect correct or not correct.<br>
 Add win function to check if the player picked the correct colors.<br>
 Make start button disappear when the player starts playing and re-appear when the round is over.<br>
