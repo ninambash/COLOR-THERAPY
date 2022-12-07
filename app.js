@@ -5,20 +5,17 @@ const message = document.querySelector(".message");
 const gamearea = document.querySelector(".gamearea");
 const button = document.querySelector("button");
 const resetbtn = document.querySelector(".play-again")
-let gameClicks = [];
-let userClicks = [];
-let inPlay = false;
-let playNum = 5;
+////////////////Adding Global varriables 4 
+let gameClicks = []; //////array that the game can use to store the clickable array
+let userClicks = []; /////we populate as the user plays
+let inPlay = false; ///// ability to disable the game
+let playNum = 1; //// this increases the number of colors to advance in the game.
 
 ///add event listeners
-
-
- 
-
 resetbtn.addEventListener("click", function(){
  reset()
 })
-window.addEventListener("load",setup)
+window.addEventListener("load",setup) 
 button.addEventListener("click", function () {
   if (!inPlay) {
     player();
@@ -52,24 +49,24 @@ function runSequence(num) {
     }, 100);
   }, 500);
 }
-///create a function for set up
+///create a function for set up    /////2///////////////////
 function setup() {
   //check if its working
   console.log("page Loaded");
   for (let X = 0; X < gameColors.length; X++) {
     let div = eleFactory("div");
-    div.style.backgroundColor = gameColors[X];
+    div.style.backgroundColor = gameColors[X];  ////added the colors here
     div.classList.add("box");
-    div.style.opacity = "0.5";
+    div.style.opacity = "0.5"; /////////// so that its not so bright 
     div.myColor = gameColors[X];
-    div.addEventListener("click", checkAnswer);
-    gamearea.appendChild(div);
+    div.addEventListener("click", checkAnswer);  /////added event listener for the four boxex(divs) here
+    gamearea.appendChild(div); ///////append the element to the game area
   }
 }
-//////////////this is where the user paticipates
+///this is where the user paticipates
 function checkAnswer(e) {
   if (inPlay) {
-    let el = e.target;
+    let el = e.target ///////getting the element information  3
     userClicks.push(el.myColor);
     el.style.opacity = "1";
     setTimeout(function () {
@@ -99,7 +96,7 @@ function endGame() {
   }
   
 }
-
+//////function to generate the elemennts   2
 function eleFactory(elType) {
   let ele = document.createElement(elType);
   return ele;
