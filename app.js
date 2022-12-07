@@ -9,7 +9,7 @@ const resetbtn = document.querySelector(".play-again")
 let gameClicks = []; //////array that the game can use to store the clickable array
 let userClicks = []; /////we populate as the user plays
 let inPlay = false; ///// ability to disable the game
-let playNum = 1; //// this increases the number of colors to advance in the game.
+let playNum = 1; //// this increases the number of colors to advance in the game. We start from one and see how far a player will go
 
 ///add event listeners
 resetbtn.addEventListener("click", function(){
@@ -18,25 +18,28 @@ resetbtn.addEventListener("click", function(){
 window.addEventListener("load",setup) 
 button.addEventListener("click", function () {
   if (!inPlay) {
-    player();
+    player(); ///////////////check if the inplay is false
   }
 });
 
 function player() {
-  button.disabled = true;
+  button.disabled = true; //////can't press the start button again once the gane starts 
   button.style.display = "none"
   messanger('Match Pattern')
-  gameClicks = [];
+  gameClicks = [];  ////launch a new game 
   userClicks = [];
-  runSequence(playNum);
+  runSequence(playNum);   /////call the run sequence function
 }
+
+//////run sequence function 
 function runSequence(num) {
   let squares = document.querySelectorAll(".box");
   num--;
-  if (num < 0) {
-    inPlay = true;
+  if (num < 0) { //////// check if the value of num is less than 0 and run through the sequence 
+    inPlay = true; ///////this allows user to only build their sequence after the sequence has run to avoid cheating 
     return;
   }
+  /////////////////////////////////user mimic this using a random color 
   let randomNum = Math.floor(Math.random() * gameColors.length);
   console.log(squares[randomNum]);
   gameClicks.push(gameColors[randomNum]);
@@ -44,7 +47,7 @@ function runSequence(num) {
   squares[randomNum].style.opacity = "1";
   setTimeout(function () {
     squares[randomNum].style.opacity = "0.5";
-    setTimeout(function () {
+    setTimeout(function () { //////////set timeout function
       runSequence(num);
     }, 100);
   }, 500);
@@ -67,10 +70,10 @@ function setup() {
 function checkAnswer(e) {
   if (inPlay) {
     let el = e.target ///////getting the element information  3
-    userClicks.push(el.myColor);
-    el.style.opacity = "1";
+    userClicks.push(el.myColor); /////// 
+    el.style.opacity = "1"; /////make it full color
     setTimeout(function () {
-      el.style.opacity = "0.5";
+      el.style.opacity = "0.5"; /////
     }, 500);
     if (userClicks.length == gameClicks.length) {
       inPlay = false;
