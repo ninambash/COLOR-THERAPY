@@ -1,4 +1,4 @@
-console.log("Lets do thissssssssssss")
+//console.log("Lets do thissssssssssss")
 ////connecting DOM elements
 let  gameColors = ["red", "blue", "green", "yellow"] /////array of all the wanted colors
 const message = document.querySelector(".message")
@@ -10,7 +10,7 @@ let gameClicks = [] //////array that the game can use to store the clickable arr
 let userClicks = [] /////we populate as the user plays
 let inPlay = false ///// ability to disable the game
 let playNum = 2 //// this increases the number of colors to advance in the game. We start from two and see how far a player will go
-
+let level = 1
 ///add event listeners
 resetbtn.addEventListener("click", function(){
  reset()
@@ -25,7 +25,7 @@ button.addEventListener("click", function () {
 function player() {
   button.disabled = true; //////can't press the start button again once the gane starts 
   button.style.display = "none"
-  userMessange('Match Pattern') ///this is what the user sees 
+  userMessage('Match Pattern') ///this is what the user sees 
   gameClicks = []  ////launch a new game 
   userClicks = []
   runSequence(playNum)   /////call the run sequence function
@@ -41,9 +41,9 @@ function runSequence(num) {
   }
   /////////////////////////////////user mimic this using a random color 
   let randomNum = Math.floor(Math.random() * gameColors.length);   // use math.random to return a random floating number https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-  console.log(squares[randomNum])
+ // console.log(squares[randomNum])
   gameClicks.push(gameColors[randomNum])
-  console.log(gameClicks);
+  //console.log(gameClicks);
   squares[randomNum].style.opacity = "1"       //////light opacity so that we can see it
   setTimeout(function () {
     squares[randomNum].style.opacity = "0.5"
@@ -55,7 +55,7 @@ function runSequence(num) {
 ///create a function for set up building our game board//////////////
 function setup() {
   //check if its working
-  console.log("page Loaded")
+  //console.log("page Loaded")
   for (let X = 0; X < gameColors.length; X++) {
     let div = eleFactory("div")
     div.style.backgroundColor = gameColors[X];  ////added the colors here
@@ -80,22 +80,23 @@ function checkAnswer(e) {
       endGame() //////////////////////////////anables the start button again/////////////////////
     }
   }
-  console.log(userClicks)
+  //console.log(userClicks)
 }
-function userMessange(mes){
+function userMessage(mes){
   message.innerHTML =mes
 }
 //////end game function
 function endGame() {
-  console.log("game over")
+  //console.log("game over")
   button.disabled = false
   button.style.display = "block"
   //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString refrence of how toSring works
   if (userClicks.toString() == gameClicks.toString()) {
     playNum++; /////increase the play number if they got correct
-    userMessange('Correct!!!! New Level') ////let the player know status of the game if correct they got a new level
+    level++
+    userMessage('Correct!!!! Level: ' + level) ////let the player know status of the game if correct they got a new level
   }else{
-    userMessange("Try again")    ////if not correct 
+    userMessage("Try again")    ////if not correct 
   }
   
 }
@@ -110,10 +111,14 @@ function reset(){
    userClicks = []
     inPlay = false
     playNum = 2
+    level = 1
     gameColors = ["red", "blue", "green", "yellow"]
     button.style.display = "block"
     button.style.opacity = "1"
     button.disabled = false
+    userMessage('Press Start Button') 
+
   
 }
+
 
