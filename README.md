@@ -19,8 +19,7 @@ HTML<br>
 CSS<br>
 JavaScript<br>
 Vanilla DOM<br>
-# post
-I used 12.5% HTML, 24.3% CSS and 63.2% javaScript <br>
+
 
 # MVP Goals
 Start button to start playing the game.<br>
@@ -50,17 +49,8 @@ When i decided on the game, I wanted to focus on the interaction of the game to 
 I proceeded to draft a wireframe to use it as a visual of my UI.<br>
 I wrote a pseudocode of what I wanted to add to the game. <br>
 I began the project using HTML, then added CSS and Javacripts.<br> 
-I completed with gradually incrementing the functionality of the game testing and refrencing on my psudo code and wireframe.<br>
-# Steps taken
-In the global scope! I connected DOM elements refferencing them from html, created Array for all the needed colors<br> 
-I added 4 arrays one for the computer called gameclicks, one for the user called user clicks, set the inplay to false so that we have the ability to disable the game,
-and last one for the number of colors I want the computer to start with.<br>
-Added a start function and connected it to the event listener<br>
-function set up created a div with 4 boxes loop through the boxes listen for clicks<br>
-run sequence function<br>
-check answer function for a win <br>
-end game function <br>
-reset function<br>
+I completed with gradually incrementing the functionality of the game testing and refrencing on my pseudocode and wireframe.<br>
+
 
 
 # Deployed link
