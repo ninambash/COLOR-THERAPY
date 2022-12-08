@@ -33,11 +33,11 @@ Make start button disappear when the player starts playing and re-appear when th
 Make a function for reset button to restart the game as opposed to reload <br>
 
 # stretch goals
+Adding levels to the game.<br>
 Make colors move faster by decreasing the timer as the player gets better at the game.<br>
-Have user log in to continue where they left off and keep score of that paticular user to continue the next time they log in.<br>
+Have user log in to continue where they left to continue bulding.<br>
 Have a separate link for rules of the game as opposed to displaying on the same page. <br>
 Adding media querries.<br>
-Adding levels to the game.<br>
 Adding more interractions to the game.
 
 # potential roadblocks
@@ -58,8 +58,7 @@ https://ninambash.github.io/Poject1-COLOR-THERAPY/
 
 
 #  Post-project reflection 
-I am working on media querries for better styling of my projects.<br>
-Centering my objects was a big challange<br>
+Target user was not properly represented. Focused on browser display as opposed to mobile display(media querries).<br>
 This project solidified some concepts in JavaScript that were still bumpy<br>
 Taking a break and come back with a fresh mind.<br>
 # Sources used
